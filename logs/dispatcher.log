@@ -1,0 +1,95 @@
+2024-11-20 21:02:57 DEBUG TelegramBot:35 - GO&n2024-11-20 21:03:18 DEBUG TelegramBot:35 - Hello-2&n2024-11-20 21:04:37 DEBUG TelegramBot:35 - Hello-2
+2024-11-20 21:04:51 DEBUG TelegramBot:35 - Okey
+2024-11-20 21:04:58 DEBUG TelegramBot:35 - а так
+2024-11-20 21:04:59 DEBUG TelegramBot:35 - и вот так
+2024-11-20 21:05:00 DEBUG TelegramBot:35 - потом так
+2024-11-20 21:05:02 DEBUG TelegramBot:35 - и еще
+2024-11-20 21:05:04 DEBUG TelegramBot:35 - и вот потом
+2024-11-20 21:05:06 DEBUG TelegramBot:35 - давай так
+2024-11-20 21:05:18 DEBUG TelegramBot:35 - что надо еще ну дава
+2024-11-20 21:05:18 DEBUG TelegramBot:35 - ыва
+2024-11-20 21:05:19 DEBUG TelegramBot:35 - ива
+2024-11-20 21:05:20 DEBUG TelegramBot:35 - ыув
+2024-11-20 21:12:45 DEBUG TelegramBot:36 - пщ
+2024-11-20 21:19:23 DEBUG TelegramBot:37 - Hello
+2024-11-20 21:19:23 ERROR TelegramBot:50 - org.telegram.telegrambots.meta.exceptions.TelegramApiRequestException: Unable to deserialize response
+2024-11-20 21:20:02 DEBUG TelegramBot:37 - привет
+2024-11-20 21:20:03 ERROR TelegramBot:50 - org.telegram.telegrambots.meta.exceptions.TelegramApiRequestException: Unable to deserialize response
+2024-11-20 21:20:10 DEBUG TelegramBot:37 - ого
+2024-11-20 21:20:10 ERROR TelegramBot:50 - org.telegram.telegrambots.meta.exceptions.TelegramApiRequestException: Unable to deserialize response
+2024-11-20 21:20:39 DEBUG TelegramBot:37 - /start
+2024-11-20 21:20:39 ERROR TelegramBot:50 - org.telegram.telegrambots.meta.exceptions.TelegramApiRequestException: Unable to deserialize response
+2024-11-20 21:20:54 DEBUG TelegramBot:37 - пук пук я люблю тебя пук ты молодец
+2024-11-20 21:20:55 ERROR TelegramBot:50 - org.telegram.telegrambots.meta.exceptions.TelegramApiRequestException: Unable to deserialize response
+2024-11-20 21:26:29 DEBUG TelegramBot:37 - Йоу
+2024-11-20 21:26:30 DEBUG TelegramBot:37 - Пудж Керри фп мом
+2024-11-20 21:26:37 DEBUG TelegramBot:37 - Ого
+2024-11-20 21:26:40 DEBUG TelegramBot:37 - Йоу
+2024-11-20 21:26:42 DEBUG TelegramBot:37 - Але
+2024-11-20 21:26:54 DEBUG TelegramBot:37 - Скажи что ты умеешь
+2024-11-21 21:08:56 DEBUG UpdateProducerImpl:13 - re
+2024-11-21 21:09:07 DEBUG UpdateProducerImpl:13 - 
+2024-11-21 21:09:13 DEBUG UpdateProducerImpl:13 - 
+2024-11-22 23:33:23 DEBUG UpdateProducerImpl:21 - Hello1
+2024-11-22 23:34:12 DEBUG UpdateProducerImpl:21 - HELLO
+2024-11-22 23:36:02 DEBUG UpdateProducerImpl:21 - Q
+2024-11-22 23:39:49 DEBUG UpdateProducerImpl:21 - FDG
+2024-11-23 14:23:31 DEBUG UpdateProducerImpl:21 - go
+2024-11-23 14:25:11 DEBUG UpdateProducerImpl:21 - как оно
+2024-11-23 14:52:53 DEBUG UpdateProducerImpl:21 - jg
+2024-11-23 14:59:21 DEBUG UpdateProducerImpl:21 - sdf
+2024-11-23 15:21:37 DEBUG UpdateProducerImpl:21 - рус
+2024-11-23 15:23:53 DEBUG UpdateProducerImpl:21 - баг
+2024-11-23 15:24:00 DEBUG UpdateProducerImpl:21 - баг
+2024-11-23 15:24:12 DEBUG UpdateProducerImpl:21 - ду
+2024-11-23 15:24:12 DEBUG UpdateProducerImpl:21 - дуду
+2024-11-23 15:24:30 DEBUG UpdateProducerImpl:21 - ьуьу
+2024-11-23 15:25:37 DEBUG UpdateProducerImpl:21 - HELLO
+2024-11-23 15:38:22 DEBUG UpdateProducerImpl:21 - go
+2024-11-23 17:24:13 DEBUG UpdateProducerImpl:21 - Hello from chat
+2024-11-23 17:24:52 DEBUG UpdateProducerImpl:21 - go
+2024-11-23 17:25:32 DEBUG UpdateProducerImpl:21 - pk
+2024-11-23 17:26:44 DEBUG UpdateProducerImpl:21 - ok
+2024-11-23 17:29:25 DEBUG UpdateProducerImpl:21 - Hello
+2024-11-23 17:38:14 DEBUG UpdateProducerImpl:21 - f nfr
+2024-11-23 17:38:55 DEBUG UpdateProducerImpl:21 - GO
+2024-11-23 18:22:13 DEBUG UpdateProducerImpl:21 - go
+2024-11-23 18:22:38 DEBUG UpdateProducerImpl:21 - Hello
+2024-11-23 18:47:20 DEBUG UpdateProducerImpl:21 - hello
+2024-11-23 18:47:42 ERROR UpdateController:38 - Unsupported message type is receivedUpdate(updateId=125538325, message=null, inlineQuery=null, chosenInlineQuery=null, callbackQuery=null, editedMessage=Message(messageId=92, from=User(id=306983632, firstName=Сергей, isBot=false, lastName=Лощилов, userName=Au16180, languageCode=ru, canJoinGroups=null, canReadAllGroupMessages=null, supportInlineQueries=null, isPremium=true, addedToAttachmentMenu=null), date=1732376794, chat=Chat(id=306983632, type=private, title=null, firstName=Сергей, lastName=Лощилов, userName=Au16180, photo=null, description=null, inviteLink=null, pinnedMessage=null, stickerSetName=null, canSetStickerSet=null, permissions=null, slowModeDelay=null, bio=null, linkedChatId=null, location=null, messageAutoDeleteTime=null, hasPrivateForwards=null, HasProtectedContent=null, joinToSendMessages=null, joinByRequest=null), forwardFrom=null, forwardFromChat=null, forwardDate=null, text=hellog, entities=null, captionEntities=null, audio=null, document=null, photo=null, sticker=null, video=null, contact=null, location=null, venue=null, animation=null, pinnedMessage=null, newChatMembers=[], leftChatMember=null, newChatTitle=null, newChatPhoto=null, deleteChatPhoto=null, groupchatCreated=null, replyToMessage=null, voice=null, caption=null, superGroupCreated=null, channelChatCreated=null, migrateToChatId=null, migrateFromChatId=null, editDate=1732376861, game=null, forwardFromMessageId=null, invoice=null, successfulPayment=null, videoNote=null, authorSignature=null, forwardSignature=null, mediaGroupId=null, connectedWebsite=null, passportData=null, forwardSenderName=null, poll=null, replyMarkup=null, dice=null, viaBot=null, senderChat=null, proximityAlertTriggered=null, messageAutoDeleteTimerChanged=null, isAutomaticForward=null, hasProtectedContent=null, webAppData=null, videoChatStarted=null, videoChatEnded=null, videoChatParticipantsInvited=null, videoChatScheduled=null), channelPost=null, editedChannelPost=null, shippingQuery=null, preCheckoutQuery=null, poll=null, pollAnswer=null, myChatMember=null, chatMember=null, chatJoinRequest=null)
+2024-11-23 18:48:19 DEBUG UpdateProducerImpl:21 - 
+2024-11-23 18:49:04 DEBUG UpdateProducerImpl:21 - 
+2024-11-23 18:49:06 DEBUG UpdateProducerImpl:21 - 
+2024-11-23 19:03:48 DEBUG UpdateProducerImpl:21 - Привет
+2024-11-23 19:06:43 DEBUG UpdateProducerImpl:21 - жаба
+2024-11-23 19:12:57 DEBUG UpdateProducerImpl:21 - па
+2024-11-23 19:13:06 DEBUG UpdateProducerImpl:21 - ма
+2024-11-23 19:25:12 DEBUG UpdateProducerImpl:21 - привет из чата в тг
+2024-11-23 19:26:27 DEBUG UpdateProducerImpl:21 - lol
+2024-11-23 19:41:46 DEBUG UpdateProducerImpl:21 - god
+2024-11-23 23:51:18 DEBUG UpdateProducerImpl:21 - golang
+2024-11-23 23:53:50 DEBUG UpdateProducerImpl:21 - go
+2024-11-23 23:58:16 DEBUG UpdateProducerImpl:21 - OK
+2024-11-24 00:00:31 DEBUG UpdateProducerImpl:21 - OK
+2024-11-24 17:10:02 DEBUG UpdateProducerImpl:21 - hello
+2024-11-24 17:11:26 DEBUG UpdateProducerImpl:21 - Снова пишу
+2024-11-25 20:45:04 DEBUG UpdateProducerImpl:21 - Hello from Node
+2024-11-25 20:47:00 DEBUG UpdateProducerImpl:21 - второе сообщение
+2024-11-25 21:01:29 DEBUG UpdateProducerImpl:21 - Третье сообщение
+2024-11-25 21:15:48 DEBUG UpdateProducerImpl:21 - Привет четвертый раз
+2024-11-26 20:27:52 DEBUG UpdateProducerImpl:21 - Привет пятый раз
+2024-11-26 22:06:11 ERROR UpdateController:39 - Unsupported message type is receivedUpdate(updateId=125538347, message=null, inlineQuery=null, chosenInlineQuery=null, callbackQuery=null, editedMessage=null, channelPost=null, editedChannelPost=null, shippingQuery=null, preCheckoutQuery=null, poll=null, pollAnswer=null, myChatMember=ChatMemberUpdated(chat=Chat(id=306983632, type=private, title=null, firstName=Сергей, lastName=Лощилов, userName=Au16180, photo=null, description=null, inviteLink=null, pinnedMessage=null, stickerSetName=null, canSetStickerSet=null, permissions=null, slowModeDelay=null, bio=null, linkedChatId=null, location=null, messageAutoDeleteTime=null, hasPrivateForwards=null, HasProtectedContent=null, joinToSendMessages=null, joinByRequest=null), from=User(id=306983632, firstName=Сергей, isBot=false, lastName=Лощилов, userName=Au16180, languageCode=ru, canJoinGroups=null, canReadAllGroupMessages=null, supportInlineQueries=null, isPremium=true, addedToAttachmentMenu=null), date=1732647969, oldChatMember=ChatMemberMember(status=member, user=User(id=7260433569, firstName=qdbp, isBot=true, lastName=null, userName=qdbp808_bot, languageCode=null, canJoinGroups=null, canReadAllGroupMessages=null, supportInlineQueries=null, isPremium=null, addedToAttachmentMenu=null)), newChatMember=ChatMemberBanned(status=kicked, user=User(id=7260433569, firstName=qdbp, isBot=true, lastName=null, userName=qdbp808_bot, languageCode=null, canJoinGroups=null, canReadAllGroupMessages=null, supportInlineQueries=null, isPremium=null, addedToAttachmentMenu=null), untilDate=0), inviteLink=null), chatMember=null, chatJoinRequest=null)
+2024-11-26 22:06:11 ERROR UpdateController:39 - Unsupported message type is receivedUpdate(updateId=125538348, message=null, inlineQuery=null, chosenInlineQuery=null, callbackQuery=null, editedMessage=null, channelPost=null, editedChannelPost=null, shippingQuery=null, preCheckoutQuery=null, poll=null, pollAnswer=null, myChatMember=ChatMemberUpdated(chat=Chat(id=306983632, type=private, title=null, firstName=Сергей, lastName=Лощилов, userName=Au16180, photo=null, description=null, inviteLink=null, pinnedMessage=null, stickerSetName=null, canSetStickerSet=null, permissions=null, slowModeDelay=null, bio=null, linkedChatId=null, location=null, messageAutoDeleteTime=null, hasPrivateForwards=null, HasProtectedContent=null, joinToSendMessages=null, joinByRequest=null), from=User(id=306983632, firstName=Сергей, isBot=false, lastName=Лощилов, userName=Au16180, languageCode=ru, canJoinGroups=null, canReadAllGroupMessages=null, supportInlineQueries=null, isPremium=true, addedToAttachmentMenu=null), date=1732647970, oldChatMember=ChatMemberBanned(status=kicked, user=User(id=7260433569, firstName=qdbp, isBot=true, lastName=null, userName=qdbp808_bot, languageCode=null, canJoinGroups=null, canReadAllGroupMessages=null, supportInlineQueries=null, isPremium=null, addedToAttachmentMenu=null), untilDate=0), newChatMember=ChatMemberMember(status=member, user=User(id=7260433569, firstName=qdbp, isBot=true, lastName=null, userName=qdbp808_bot, languageCode=null, canJoinGroups=null, canReadAllGroupMessages=null, supportInlineQueries=null, isPremium=null, addedToAttachmentMenu=null)), inviteLink=null), chatMember=null, chatJoinRequest=null)
+2024-11-26 22:06:11 DEBUG UpdateProducerImpl:21 - /start
+2024-11-26 22:06:20 DEBUG UpdateProducerImpl:21 - /help
+2024-11-26 22:06:31 DEBUG UpdateProducerImpl:21 - /registration
+2024-11-26 22:06:35 DEBUG UpdateProducerImpl:21 - /cancel
+2024-11-26 22:06:49 DEBUG UpdateProducerImpl:21 - /some_test
+2024-11-26 22:06:57 DEBUG UpdateProducerImpl:21 - а просто если написать
+2024-11-26 22:07:14 DEBUG UpdateProducerImpl:21 - 
+2024-11-26 22:07:34 DEBUG UpdateProducerImpl:21 - 
+2024-11-26 22:09:41 DEBUG UpdateProducerImpl:21 - просто пишу
+2024-12-02 20:34:48 DEBUG UpdateProducerImpl:21 - 
+2024-12-03 20:48:43 DEBUG UpdateProducerImpl:21 - 
+2024-12-04 20:50:42 DEBUG UpdateProducerImpl:21 - 
+2024-12-04 20:58:16 DEBUG UpdateProducerImpl:21 - 
