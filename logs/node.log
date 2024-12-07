@@ -50,3 +50,6 @@
 2024-12-03 20:48:43 DEBUG ConsumerServiceImpl:42 - NODE: Photo message is received
 2024-12-04 20:50:42 DEBUG ConsumerServiceImpl:34 - NODE: Doc message is received
 2024-12-04 20:58:16 DEBUG ConsumerServiceImpl:42 - NODE: Photo message is received
+2024-12-07 20:17:13 DEBUG ConsumerServiceImpl:34 - NODE: Doc message is received
+2024-12-07 20:17:37 DEBUG ConsumerServiceImpl:34 - NODE: Doc message is received
+2024-12-07 20:18:07 DEBUG ConsumerServiceImpl:42 - NODE: Photo message is received
