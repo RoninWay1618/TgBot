@@ -2,7 +2,7 @@ package com.qdbp.controller;
 
 
 import com.qdbp.service.UpdateProducer;
-import com.qdbp.utils.MessageUtils;
+import com.qdbp.MessageUtils;
 import lombok.extern.log4j.Log4j;
 import org.springframework.stereotype.Component;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
