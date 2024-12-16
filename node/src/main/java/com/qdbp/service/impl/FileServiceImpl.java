@@ -1,11 +1,16 @@
 package com.qdbp.service.impl;
 
+import lombok.RequiredArgsConstructor;
 import com.qdbp.service.enums.LinkType;
 import com.qdbp.utils.CryptoTool;
 import lombok.extern.log4j.Log4j;
 import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.http.*;
+import org.springframework.http.HttpEntity;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpMethod;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 import org.telegram.telegrambots.meta.api.objects.Document;
@@ -25,6 +30,7 @@ import java.net.MalformedURLException;
 import java.net.URL;
 
 @Log4j
+@RequiredArgsConstructor
 @Service
 public class FileServiceImpl implements FileService {
     @Value("${token}")
@@ -40,21 +46,14 @@ public class FileServiceImpl implements FileService {
     private final BinaryContentDAO binaryContentDAO;
     private final CryptoTool cryptoTool;
 
-    public FileServiceImpl(AppDocumentDAO appDocumentDAO, AppPhotoDAO appPhotoDAO, BinaryContentDAO binaryContentDAO, CryptoTool cryptoTool) {
-        this.appDocumentDAO = appDocumentDAO;
-        this.appPhotoDAO = appPhotoDAO;
-        this.binaryContentDAO = binaryContentDAO;
-        this.cryptoTool = cryptoTool;
-    }
-
     @Override
     public AppDocument processDoc(Message telegramMessage) {
         Document telegramDoc = telegramMessage.getDocument();
         String fileId = telegramDoc.getFileId();
         ResponseEntity<String> response = getFilePath(fileId);
         if (response.getStatusCode() == HttpStatus.OK) {
-            BinaryContent persistentBinaryContent = getPersistentBinaryContent(response);
-            AppDocument transientAppDoc = buildTransientAppDoc(telegramDoc, persistentBinaryContent);
+            var persistentBinaryContent = getPersistentBinaryContent(response);
+            var transientAppDoc = buildTransientAppDoc(telegramDoc, persistentBinaryContent);
             return appDocumentDAO.save(transientAppDoc);
         } else {
             throw new UploadFileException("Bad response from telegram service: " + response);

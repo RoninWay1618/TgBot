@@ -1,5 +1,6 @@
 package com.qdbp.service.impl;
 
+import lombok.RequiredArgsConstructor;
 import com.qdbp.dao.AppUserDAO;
 import com.qdbp.dao.RawDataDAO;
 import com.qdbp.entity.AppDocument;
@@ -13,6 +14,7 @@ import com.qdbp.service.enums.ServiceCommand;
 import com.qdbp.entity.AppPhoto;
 import lombok.extern.log4j.Log4j;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 import org.telegram.telegrambots.meta.api.objects.Update;
 import org.telegram.telegrambots.meta.api.objects.User;
@@ -24,6 +26,7 @@ import static com.qdbp.service.enums.ServiceCommand.*;
 
 
 @Log4j
+@RequiredArgsConstructor
 @Service
 public class MainServiceImpl implements MainService {
     private final RawDataDAO rawDataDAO;
@@ -32,13 +35,6 @@ public class MainServiceImpl implements MainService {
     private final FileService fileService;
     private final AppUserService appUserService;
 
-    public MainServiceImpl(RawDataDAO rawDataDAO, ProducerService producerService, AppUserDAO appUserDAO, FileService fileService, AppUserService appUserService) {
-        this.rawDataDAO = rawDataDAO;
-        this.producerService = producerService;
-        this.appUserDAO = appUserDAO;
-        this.fileService = fileService;
-        this.appUserService = appUserService;
-    }
 
     @Override
     public void processTextMessage(Update update) {
@@ -49,7 +45,7 @@ public class MainServiceImpl implements MainService {
         var output = "";
 
         var serviceCommand = ServiceCommand.fromValue(text);
-        if(CANCEL.equals(text)){
+        if (CANCEL.equals(serviceCommand)) {
             output = cancelProcess(appUser);
         } else if (BASIC_STATE.equals(userState)) {
             output = producerServiceCommand(appUser, text);
@@ -68,14 +64,14 @@ public class MainServiceImpl implements MainService {
         saveRawData(update);
         var appUser = findOrSaveAppUser(update);
         var chatId = update.getMessage().getChatId();
-        if(isNotAllowToSendContent(chatId, appUser)){
+        if (isNotAllowToSendContent(chatId, appUser)) {
             return;
         }
         try {
             AppDocument doc = fileService.processDoc(update.getMessage());
             String link = fileService.generateLink(doc.getId(), LinkType.GET_DOC);
             var answer = "Документ успешно загружен! "
-                    + "Ссылка для скачивания: "+link;
+                    + "Ссылка для скачивания: " + link;
             sendAnswer(answer, chatId);
         } catch (UploadFileException ex) {
             log.error(ex);
@@ -90,14 +86,14 @@ public class MainServiceImpl implements MainService {
         saveRawData(update);
         var appUser = findOrSaveAppUser(update);
         var chatId = update.getMessage().getChatId();
-        if(isNotAllowToSendContent(chatId, appUser)){
+        if (isNotAllowToSendContent(chatId, appUser)) {
             return;
         }
         try {
             AppPhoto photo = fileService.processPhoto(update.getMessage());
             String link = fileService.generateLink(photo.getId(), LinkType.GET_PHOTO);
             var answer = "Фото успешно загружено! "
-                    + "Ссылка для скачивания: "+link;
+                    + "Ссылка для скачивания: " + link;
             sendAnswer(answer, chatId);
         } catch (UploadFileException ex) {
             log.error(ex);
@@ -152,9 +148,9 @@ public class MainServiceImpl implements MainService {
     }
 
     private AppUser findOrSaveAppUser(Update update){
-        User telegramUser = update.getMessage().getFrom();
-        var optional = appUserDAO.findByTelegramUserId(telegramUser.getId());
-        if(optional.isEmpty()){
+        var telegramUser = update.getMessage().getFrom();
+        var appUserOpt = appUserDAO.findByTelegramUserId(telegramUser.getId());
+        if (appUserOpt.isEmpty()) {
             AppUser transientAppUser = AppUser.builder()
                     .telegramUserId(telegramUser.getId())
                     .username(telegramUser.getUserName())
@@ -165,11 +161,11 @@ public class MainServiceImpl implements MainService {
                     .build();
             return appUserDAO.save(transientAppUser);
         }
-        return optional.get();
+        return appUserOpt.get();
     };
 
     private void saveRawData(Update update) {
-        RawData rawData = RawData.builder()
+        var rawData = RawData.builder()
                 .event(update)
                 .build();
         rawDataDAO.save(rawData);
