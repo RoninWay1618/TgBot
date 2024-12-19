@@ -15,36 +15,38 @@ public class RabbitConfiguration {
 
     @Value("${spring.rabbitmq.queues.text-message-update}")
     private String textMessageUpdateQueue;
+
     @Value("${spring.rabbitmq.queues.doc-message-update}")
     private String docMessageUpdateQueue;
+
     @Value("${spring.rabbitmq.queues.photo-message-update}")
     private String photoMessageUpdateQueue;
+
     @Value("${spring.rabbitmq.queues.answer-message}")
     private String answerMessageQueue;
-    @Bean
-    public MessageConverter jsonMMessageConverter(){
 
-        return  new Jackson2JsonMessageConverter();
+    @Bean
+    public MessageConverter jsonMessageConverter() {
+        return new Jackson2JsonMessageConverter();
     }
 
     @Bean
-    public Queue textMessageQueue(){
-
+    public Queue textMessageQueue() {
         return new Queue(textMessageUpdateQueue);
     }
-    @Bean
-    public Queue docMessageQueue(){
 
+    @Bean
+    public Queue docMessageQueue() {
         return new Queue(docMessageUpdateQueue);
     }
-    @Bean
-    public Queue photoMessageQueue(){
 
+    @Bean
+    public Queue photoMessageQueue() {
         return new Queue(photoMessageUpdateQueue);
     }
-    @Bean
-    public Queue answerMessageQueue(){
 
+    @Bean
+    public Queue answerMessageQueue() {
         return new Queue(answerMessageQueue);
     }
 }

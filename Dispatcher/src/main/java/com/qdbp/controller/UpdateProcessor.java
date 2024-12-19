@@ -9,7 +9,6 @@ import org.telegram.telegrambots.meta.api.objects.Update;
 import com.qdbp.configuration.RabbitConfiguration;
 import com.qdbp.service.UpdateProducer;
 import com.qdbp.utils.MessageUtils;
-import com.qdbp.configuration.RabbitConfiguration;
 
 
 @Log4j

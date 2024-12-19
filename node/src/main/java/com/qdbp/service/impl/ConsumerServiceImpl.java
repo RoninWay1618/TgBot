@@ -13,6 +13,7 @@ import com.qdbp.service.MainService;
 @RequiredArgsConstructor
 @Service
 public class ConsumerServiceImpl implements ConsumerService {
+
     private final MainService mainService;
 
     @Override
@@ -20,13 +21,11 @@ public class ConsumerServiceImpl implements ConsumerService {
     public void consumeTextMessageUpdates(Update update) {
         log.debug("NODE: Text message is received");
         mainService.processTextMessage(update);
-
     }
 
     @Override
     @RabbitListener(queues = "${spring.rabbitmq.queues.doc-message-update}")
     public void consumeDocMessageUpdates(Update update) {
-
         log.debug("NODE: Doc message is received");
         mainService.processDocMessage(update);
     }
@@ -34,7 +33,6 @@ public class ConsumerServiceImpl implements ConsumerService {
     @Override
     @RabbitListener(queues = "${spring.rabbitmq.queues.photo-message-update}")
     public void consumePhotoMessageUpdates(Update update) {
-
         log.debug("NODE: Photo message is received");
         mainService.processPhotoMessage(update);
     }

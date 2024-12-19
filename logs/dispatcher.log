@@ -56568,3 +56568,6 @@
 2024-12-16 21:24:59 ERROR TelegramBot:71 - Error executing org.telegram.telegrambots.meta.api.methods.send.SendMessage query: [429] Too Many Requests: retry after 32
 2024-12-16 21:24:59 ERROR TelegramBot:71 - Error executing org.telegram.telegrambots.meta.api.methods.send.SendMessage query: [429] Too Many Requests: retry after 32
 2024-12-16 21:24:59 ERROR TelegramBot:71 - Error executing org.telegram.telegrambots.meta.api.methods.send.SendMessage query: [429] Too Many Requests: retry after 32
+2024-12-16 22:30:13 DEBUG UpdateProducerImpl:20 - re
+2024-12-16 22:33:42 DEBUG UpdateProducerImpl:20 - го
+2024-12-16 22:33:45 DEBUG UpdateProducerImpl:20 - /help

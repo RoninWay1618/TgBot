@@ -6,7 +6,6 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
-import org.telegram.telegrambots.bots.TelegramLongPollingBot;
 import org.telegram.telegrambots.bots.TelegramWebhookBot;
 import org.telegram.telegrambots.meta.api.methods.BotApiMethod;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
@@ -17,24 +16,27 @@ import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 import javax.annotation.PostConstruct;
 
 
-
 @Log4j
 @RequiredArgsConstructor
 @Component
 public class TelegramBot extends TelegramWebhookBot {
+
     @Value("${bot.name}")
     private String botName;
+
     @Value("${bot.token}")
     private String botToken;
+
     @Value("${bot.uri}")
     private String botUri;
-    private UpdateProcessor updateProcessor;
+
+    private final UpdateProcessor updateProcessor;
 
     @PostConstruct
-    public void init(){
+    public void init() {
         updateProcessor.registerBot(this);
-        try{
-            var setWebhook= SetWebhook.builder()
+        try {
+            var setWebhook = SetWebhook.builder()
                     .url(botUri)
                     .build();
             this.setWebhook(setWebhook);
@@ -42,7 +44,6 @@ public class TelegramBot extends TelegramWebhookBot {
             log.error(e);
         }
     }
-
 
     @Override
     public String getBotUsername() {
@@ -53,7 +54,6 @@ public class TelegramBot extends TelegramWebhookBot {
     public String getBotToken() {
         return botToken;
     }
-
 
     @Override
     public String getBotPath() {
@@ -74,5 +74,4 @@ public class TelegramBot extends TelegramWebhookBot {
     public BotApiMethod<?> onWebhookUpdateReceived(Update update) {
         return null;
     }
-
 }

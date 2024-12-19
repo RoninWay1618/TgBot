@@ -1,9 +1,10 @@
 package com.qdbp.configuration;
 
+import org.hashids.Hashids;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import com.qdbp.utils.CryptoTool;
+
 
 @Configuration
 public class NodeConfiguration {
@@ -11,7 +12,8 @@ public class NodeConfiguration {
     private String salt;
 
     @Bean
-    public CryptoTool getCryptoTool(){
-        return new CryptoTool(salt);
+    public Hashids getHashids() {
+        var minHashLength = 10;
+        return new Hashids(salt, minHashLength);
     }
 }

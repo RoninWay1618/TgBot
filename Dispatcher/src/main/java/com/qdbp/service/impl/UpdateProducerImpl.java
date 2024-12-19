@@ -12,6 +12,7 @@ import com.qdbp.service.UpdateProducer;
 @RequiredArgsConstructor
 @Service
 public class UpdateProducerImpl implements UpdateProducer {
+
     private final RabbitTemplate rabbitTemplate;
 
     @Override
